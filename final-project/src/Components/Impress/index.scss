@@ -1,0 +1,58 @@
+.impress {
+    background-image: url(https://preview.colorlib.com/theme/woodrox/img/notify-bg.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: content-box;
+    &__container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 120px 15px;
+    }
+    &__text {
+      text-align: center;
+      h2 {
+        font-family: "Heebo", sans-serif;
+        font-size: 2.25rem;
+        color: #FFFFFF;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      p {
+          font-size: 0.875rem;
+          font-family: "Roboto", sans-serif;
+          line-height: 1.75rem;
+          color: #FFFFFF;
+          max-width: 500px;
+          margin:0 auto 35px;
+      }
+      a {
+        display: inline-block;
+        background-color: #FABA00;
+        color: #ffffff;
+        font-family: "Heebo", sans-serif;
+        width: 148px;
+        font-size: 0.825rem;
+        font-weight: 500;
+        border: 1px solid #FABA00;
+        line-height: 2.5rem;
+        border-radius: 3px;
+        outline: none;
+        box-shadow: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 300ms linear;
+  
+        &:hover{
+          background-color: transparent;
+          color: #FABA00;
+        }
+      }
+    }
+    &__cards{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  

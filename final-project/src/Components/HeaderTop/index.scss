@@ -1,0 +1,44 @@
+.header__top {
+  background: rgba(255, 255, 255, 0.15);
+  height: 30px;
+
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__left{
+    a{
+        line-height: 30px;
+        margin-right: 50px;
+        color: #FFFFFF;
+        font-size: 0.75rem;
+        transition: all 300ms linear;
+        &:hover{
+          color: #FABA00;
+        }
+    }
+  }
+
+  &__right {
+    &__icons {
+      display: flex;
+
+      li {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: #FFFFFF;
+        transition: all 300ms linear;
+        cursor: pointer;
+        &:hover{
+          color: #FABA00;
+        }
+      }
+    }
+  }
+}

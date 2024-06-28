@@ -1,0 +1,14 @@
+.projects{
+    display: flex;
+    overflow: hidden;
+}
+@media only screen and (max-width: 1200px) {
+    .projects__card:nth-of-type(3){
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .projects{
+      flex-direction: column;
+    }
+  }

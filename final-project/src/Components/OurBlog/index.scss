@@ -1,0 +1,41 @@
+.ourblog {
+    background-color: #FFFFFF;
+    box-sizing: content-box;
+    &__container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 120px 15px;
+    }
+    &__header {
+      text-align: center;
+      margin-bottom: 75px;
+      h2 {
+        font-family: "Heebo", sans-serif;
+        font-size: 2.25rem;
+        color: #222222;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+      p {
+          font-size: 0.875rem;
+          font-family: "Roboto", sans-serif;
+          line-height: 1.75rem;
+          color: #777777;
+          max-width: 740px;
+          margin: auto;
+      }
+    }
+    &__cards{
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 1000px) {
+        &__cards {
+          flex-direction: column;
+        }
+      }
+  }
+  

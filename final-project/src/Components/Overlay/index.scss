@@ -1,0 +1,31 @@
+.overlay {
+    background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url(https://preview.colorlib.com/theme/woodrox/img/banner/banner.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 180px 15px;
+    }
+    h2 {
+      color: #ffffff;
+      text-align: center;
+      font-size: 3rem;
+      font-family: "Heebo", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    p{
+      text-align: center;
+      color: #ffffff;
+    }
+    svg{
+      margin: 0 10px;
+    }
+    a {
+      font-size: 0.875rem;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+    }
+  }

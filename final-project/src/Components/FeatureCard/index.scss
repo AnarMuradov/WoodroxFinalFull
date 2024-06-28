@@ -1,0 +1,45 @@
+.feature__card{
+    padding: 30px;
+    background: #f9f9ff;
+    border-radius: 10px;
+    transition: all 300ms linear;
+    &__text{
+        margin-bottom: 20px;
+        svg{
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            text-align: center;
+            line-height: 24px;
+            margin-right: 15px;
+            transition: all 300ms linear;
+        }
+        h4{
+            display: inline-block;
+            font-size: 1.125rem;
+            line-height: 24px;
+            color: #222222;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            transition: all 300ms linear;
+            position: relative;
+            max-width: 270px;
+        }
+    }
+    p{
+        line-height: 1.5rem;
+        font-size: 0.875rem;
+        font-family: "Roboto", sans-serif;
+        color: #777777;
+    }
+    &:hover{
+        background: #fff;
+        box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1); 
+        .feature__card__text{
+            h4{
+                color: #FABA00;
+            }
+            color: #FABA00;
+        }
+    }
+}

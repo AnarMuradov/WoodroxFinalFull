@@ -1,0 +1,104 @@
+.hero {
+    background-image: url('../../Image/home-banner12.jpg');
+    background-size: cover;
+  
+    &__container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 200px 15px;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    &__left {
+      h2 {
+        font-family: "Heebo", sans-serif;
+        font-weight: 700;
+        margin-bottom: 20px;
+        font-size: 2.25rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      p {
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 35px;
+        max-width: 550px;
+        font-size: 0.875rem;
+        color: #ffffff;
+      }
+      a {
+        display: inline-block;
+        background-color: #FABA00;
+        color: #ffffff;
+        font-family: "Heebo", sans-serif;
+        width: 148px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        border: 1px solid #FABA00;
+        line-height: 3rem;
+        border-radius: 3px;
+        outline: none;
+        box-shadow: none;
+        text-align: center;
+        cursor: pointer;
+        transition: all 300ms linear;
+  
+        &:hover{
+          background-color: transparent;
+          color: #FABA00;
+        }
+      }
+    }
+  
+    &__right {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      width: calc(100% / 3);
+      li {
+        width: 100%;
+        height: 150px;
+        text-align: center;
+        line-height: 170px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 300ms linear;
+        svg {
+          width: 40px;
+          height: 40px;
+          color: #ffffff;
+        }
+        &:hover{
+          background-color: #FABA00;
+        }
+      }
+      li:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      li:nth-of-type(6) {
+        border-bottom: none;
+      }
+      li:nth-of-type(5) {
+        border-bottom: none;
+      }
+    }
+    @media only screen and (max-width: 900px) {
+      &__container {
+        flex-direction: column;
+      }
+      &__right {
+          margin-top: 70px;
+          width: 550px;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      &__right {
+        display: none;
+      }
+    }
+  }
