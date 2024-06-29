@@ -1,35 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import FurnitureCard from "../FurnitureCard";
 
 function Furniture() {
+  const [api, setApi] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/furniture")
+      .then((res) => res.json())
+      .then((data) => setApi(data));
+  }, []);
+
   return (
     <div className="furniture">
       <div className="furniture__container">
         <div className="furniture__header">
-          <h2>MOST POPULAR FURNITURES</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.
-          </p>
+          <h2>FURNITURES</h2>
         </div>
         <div className="furniture__cards">
-            <FurnitureCard
-             img={"https://preview.colorlib.com/theme/woodrox/img/furniture/furniture-1.jpg.webp"}
-             h={"GREEN BUTTER SOFA"}
-             p={"Sony laptops are among the most well known laptops on today’s market. Sony is a name that."}/>
-
-            <FurnitureCard
-             img={"https://preview.colorlib.com/theme/woodrox/img/furniture/furniture-2.jpg.webp"}
-             h={"GREEN BUTTER SOFA"}
-             p={"Sony laptops are among the most well known laptops on today’s market. Sony is a name that."}/>
-
-            <FurnitureCard
-             img={"https://preview.colorlib.com/theme/woodrox/img/furniture/furniture-3.jpg.webp"}
-             h={"GREEN BUTTER SOFA"}
-             p={"Sony laptops are among the most well known laptops on today’s market. Sony is a name that."}/>
-        </div>
+        {api.map((x)=>{
+          return(
+              <FurnitureCard key={x._id}
+              img={x.image}
+              h={x.title}
+              price={x.price}
+              />
+            )
+          })}
+          </div>
       </div>
     </div>
   );

@@ -43,6 +43,10 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import AdminPanel from "./Pages/AdminPanel";
+import AllFurniture from "./Components/AdminPanelComponents/AllFurniture";
+import AllFurnitureCategory from "./Components/AdminPanelComponents/AllFurnitureCategory";
+import FurnitureCategoryUpdate from "./Pages/FurnitureCategoryUpdate";
+import CreateFurnitureCategory from "./Pages/CreateFurnitureCategory";
 
 
 
@@ -95,7 +99,21 @@ function App() {
               path="/AdminPanel/Users/CreateUser"
               element={<CreateUser />}
             />
+            <Route path="/AdminPanel/Furniture" element={<AllFurniture />} />
+            <Route
+              path="/AdminPanel/FurnitureCategories"
+              element={<AllFurnitureCategory />}
+            />
+              <Route
+              path="/AdminPanel/FurnitureCategories/Update/:id"
+              element={<FurnitureCategoryUpdate />}
+            />
+            <Route
+              path="/AdminPanel/FurnitureCategories/CreateCategory"
+              element={<CreateFurnitureCategory />}
+            />
             </Route>
+
 
 
       </Routes>

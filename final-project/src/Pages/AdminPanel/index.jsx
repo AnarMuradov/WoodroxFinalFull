@@ -28,6 +28,22 @@ const AdminPanel = () => {
               >
                 <li>Users</li>
               </NavLink>
+              <NavLink
+                to="/AdminPanel/Furniture"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                <li>Furnitures</li>
+              </NavLink>
+              <NavLink
+                to="/AdminPanel/FurnitureCategories"
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "active" : ""
+                }
+              >
+                <li>Furniture categories</li>
+              </NavLink>
            
             </ul>
           </div>

@@ -1,27 +1,49 @@
 .furniture__card{
-    width: 100%;
-    img{
+    width:350px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;    img{
         width: 100%;
     }
+   &__content{
+    display: flex;
+    margin-top: 25px;    
+    justify-content: space-between;
     h4{
-        font-size: 18px;
+        font-size: 16px;
         text-transform: uppercase;
         font-family: "Heebo", sans-serif;
         font-weight: bold;
         color: #222222;
-        margin-top: 25px;
-        margin-bottom: 12px;
+        // margin-bottom: 12px;
         transition: all 300ms linear 0s;
+        cursor: pointer;
+        &:hover{
+           
+                color: #FABA00;
+          
+        }
     }
+  &__buy{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 5px;
     p{
         line-height: 1.5rem;
         font-size: 0.875rem;
         font-family: "Roboto", sans-serif;
-        color: #777777;
+        color: #2d2d2d;
+        font-weight: 500;
     }
-    &:hover{
-        h4{
-            color: #FABA00;
+    i{
+        cursor: pointer;
+        transition: all 300ms linear 0s;
+
+        &:hover{
+            color: #c79d21;
+
         }
     }
+  }
+   
+   }
 }
