@@ -24,20 +24,27 @@ function HeaderBottom() {
             <li>
               <Link to="/about">ABOUT</Link>
             </li>
+            {decode?.role === "Admin" ? (
+              <li >
+            <Link to={"/AdminPanel"}>
+                ADMIN PANEL
+            </Link>
+                </li>
+          ) : null}
             {decode ? (
               <>
                 <li
                   onClick={() => {
                     LogOut();
                   }}
-                  className="navbar_bottom_container_items_login"
+                  
                 >
-                  <span>LOG OUT</span>
+                  <span style={{cursor:"pointer"}}>LOG OUT</span>
                 </li>
               </>
             ) : (
               <>
-                  <li className="navbar_bottom_container_items_login">
+                  <li>
                 <Link to={"/login"}>
                   LOGIN
                 </Link>

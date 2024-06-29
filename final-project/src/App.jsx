@@ -8,6 +8,10 @@ import ProjectDetails from "./Pages/ProjectDetails";
 import LoginPage from "./Pages/LoginPage";
 import LoginHelp from "./Pages/LoginHelpPage";
 import Register from "./Pages/RegisterPage";
+import UserUpdate from "./Pages/UserUpdatePage";
+import CreateUser from "./Pages/CreateUserPage";
+import AllUsers from "./Components/AdminPanelComponents/AllUsers";
+
 
 
 import './App.scss'
@@ -38,6 +42,7 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import AdminPanel from "./Pages/AdminPanel";
 
 
 
@@ -80,6 +85,17 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/login/help" element={<LoginHelp />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/AdminPanel" element={<AdminPanel />}>
+            <Route path="/AdminPanel/Users" element={<AllUsers />} />
+            <Route
+              path="/AdminPanel/Users/Update/:id"
+              element={<UserUpdate />}
+            />
+            <Route
+              path="/AdminPanel/Users/CreateUser"
+              element={<CreateUser />}
+            />
+            </Route>
 
 
       </Routes>
