@@ -1,7 +1,7 @@
 import React from 'react'
 import "./index.scss"
 
-function FurnitureCard({img,h,price}) {
+function FurnitureCard({img,h,price,i,click}) {
   return (
     <div className="furniture__card">
         <img src={img} alt="" />
@@ -9,7 +9,7 @@ function FurnitureCard({img,h,price}) {
         <h4>{h}</h4>
         <div className='furniture__card__content__buy'>
         <p>{price}$ </p>
-        <i className="fa-solid fa-bag-shopping"></i>
+        <i onClick={click} className={i}></i>
         </div>
         </div>
     </div>

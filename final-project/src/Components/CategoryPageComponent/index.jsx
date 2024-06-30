@@ -1,15 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import FurnitureCard from "../FurnitureCard";
-import { WishListContext } from '../../Context/WishListContext'
-function Furniture() {
+
+function CategoryPageComponent() {
   const [api, setApi] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/furniture")
+    fetch(`http://localhost:3000/furniturebycategory/${id}`)
       .then((res) => res.json())
       .then((data) => setApi(data));
   }, []);
-  const{ addWishList,isWishList }  = useContext(WishListContext)
+  const { id } = useParams();
+
 
   return (
     <div className="furniture">
@@ -20,14 +21,10 @@ function Furniture() {
         <div className="furniture__cards">
         {api.map((x)=>{
           return(
-              <FurnitureCard  key={x._id}
+              <FurnitureCard key={x._id}
               img={x.image}
               h={x.title}
               price={x.price}
-              i={!isWishList(x) ? "fa-regular fa-heart":"fa-solid fa-heart"}
-              click={()=>addWishList(x)}
-            
-          
               />
             )
           })}
@@ -37,4 +34,4 @@ function Furniture() {
   );
 }
 
-export default Furniture;
+export default CategoryPageComponent;

@@ -3,9 +3,11 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { UserContext } from "../../Context/UserContext";
+import { WishListContext } from "../../Context/WishListContext";
 function HeaderBottom() {
   const [openMenu, setOpenMenu] = useState(false)
   const { decode, LogOut } = useContext(UserContext);
+  const {wishlist}  = useContext(WishListContext)
 
   return (
     <div className="header__bottom">
@@ -23,6 +25,10 @@ function HeaderBottom() {
             </li>
             <li>
               <Link to="/about">ABOUT</Link>
+            </li>
+            <li>
+            
+              <Link to="/wishlist">WISHLIST<sup>{wishlist && wishlist.length ? wishlist.length : ""}</sup></Link>
             </li>
             {decode?.role === "Admin" ? (
               <li >
@@ -60,7 +66,7 @@ function HeaderBottom() {
               </ul>
             </li>
             <li className="header__bottom__right__nav__blog">
-              <Link>BLOG</Link>
+              <Link to={'/blog'}>BLOG</Link>
               <ul className="header__bottom__right__nav__blog__menu">
                 <li>BLOG</li>
                 <li>BLOG DETAIL</li>

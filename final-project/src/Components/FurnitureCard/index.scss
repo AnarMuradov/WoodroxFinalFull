@@ -37,9 +37,9 @@
     i{
         cursor: pointer;
         transition: all 300ms linear 0s;
-
+        color: #c79d21;
         &:hover{
-            color: #c79d21;
+            color: red;
 
         }
     }

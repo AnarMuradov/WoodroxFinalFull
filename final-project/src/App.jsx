@@ -47,6 +47,9 @@ import AllFurniture from "./Components/AdminPanelComponents/AllFurniture";
 import AllFurnitureCategory from "./Components/AdminPanelComponents/AllFurnitureCategory";
 import FurnitureCategoryUpdate from "./Pages/FurnitureCategoryUpdate";
 import CreateFurnitureCategory from "./Pages/CreateFurnitureCategory";
+import CategoryPage from "./Pages/CategoryPage";
+import Blog from "./Pages/BlogPage";
+import WishList from "./Pages/WishListPage";
 
 
 
@@ -83,7 +86,11 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/project" element={<Project/>}/>
+        <Route path="/blog" element={<Blog/>}/>
         <Route path="/project-details" element={<ProjectDetails/>}/>
+        <Route path="/furniturebycategory/:id" element={<CategoryPage />} />
+        <Route path="/wishlist" element={<WishList />}/>
+
         
         </Route>
         <Route path="/login" element={<LoginPage />} />

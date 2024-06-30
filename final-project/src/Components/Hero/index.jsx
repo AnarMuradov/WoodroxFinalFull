@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function Hero() {
+  const [api,setApi] = useState([])
+  useEffect(() => {
+  fetch("http://localhost:3000/furniturecategories")
+  .then(res=>res.json())
+  .then(data=>setApi(data))
+  }, [])
   return (
     <div className="hero">
       <div className="hero__container">
@@ -17,13 +24,15 @@ function Hero() {
           </p>
           <a href="/#">Get Started</a>
         </div>
-        <ul className="hero__right">
-          <li><FontAwesomeIcon icon="fa-solid fa-couch" /></li>
-          <li><FontAwesomeIcon icon="fa-solid fa-bed" /></li>
-          <li><FontAwesomeIcon icon="fa-solid fa-computer" /></li>
-          <li><FontAwesomeIcon icon="fa-solid fa-anchor" /></li>
-          <li><FontAwesomeIcon icon="fa-solid fa-toilet-portable" /></li>
-          <li><FontAwesomeIcon icon="fa-solid fa-kitchen-set" /></li>
+        <ul className="hero__right">    
+          {api.map((x)=>{
+            return(
+              <Link key={x._id} to={`furniturebycategory/${x._id}`}>
+             <li>{x.category}</li>
+            </Link>
+            )
+          })}
+         
         </ul>
       </div>
     </div>
