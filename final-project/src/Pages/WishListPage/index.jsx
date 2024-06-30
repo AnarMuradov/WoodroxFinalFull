@@ -26,6 +26,7 @@ function WishList() {
           return(
               <FurnitureCard key={x._id}
               img={x.image}
+              detail={`/detail/${x._id}`}
               h={x.title}
               price={x.price}
               i={!isWishList(x) ? "fa-regular fa-heart":"fa-solid fa-heart"}

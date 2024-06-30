@@ -50,6 +50,7 @@ import CreateFurnitureCategory from "./Pages/CreateFurnitureCategory";
 import CategoryPage from "./Pages/CategoryPage";
 import Blog from "./Pages/BlogPage";
 import WishList from "./Pages/WishListPage";
+import Detail from "./Pages/DetailPage";
 
 
 
@@ -90,6 +91,8 @@ function App() {
         <Route path="/project-details" element={<ProjectDetails/>}/>
         <Route path="/furniturebycategory/:id" element={<CategoryPage />} />
         <Route path="/wishlist" element={<WishList />}/>
+        <Route path="/detail/:id" element={<Detail />}/>
+
 
         
         </Route>

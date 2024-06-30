@@ -23,6 +23,7 @@ function Furniture() {
               <FurnitureCard  key={x._id}
               img={x.image}
               h={x.title}
+              detail={`/detail/${x._id}`}
               price={x.price}
               i={!isWishList(x) ? "fa-regular fa-heart":"fa-solid fa-heart"}
               click={()=>addWishList(x)}
